@@ -7,17 +7,14 @@
 
     <title>Test POO</title>
 
-    <?php
-    require('model/Film1.class.php');
-    require('model/Film2.class.php');
-    ?>
-
   </head>
 
   <body>
 
 <p>Exercice n° 1</p>
 <?php
+require('model/Film1.class.php');
+require('model/Film2.class.php');
     // 1ère méthode:
     $jurassicPark = new Film1("1", "Jurassic Park", "Steven SPIELBER", "1993");
     echo $jurassicPark->getNom1() . " a été réalisé par " . $jurassicPark->getRealisateur1() . " en " . $jurassicPark->getAnnee1() . ". </br>";
@@ -35,9 +32,22 @@
 ?>
 
 <p>Exercice n° 2</p>
+<form action='index.php' method='post'>
+    <label for='chiffreA'>Chiffre A : </label>
+    <input type='text' name='chiffreA' id='chiffreA'><br>
+    <label for='chiffreB'>Chiffre B :</label>
+    <input type='text' name='chiffreB' id='chiffreB'><br>
+    <input type='submit' value='Envoyer'>
+</form>
 <?php
-
-
+    require('model/Calculatrice.class.php');
+    $calcul = Calculatrice::addition($_POST['chiffreA'], $_POST['chiffreB']);
+    echo "Chiffre A = " . $_POST['chiffreA'] . " & Chiffre B = " . $_POST['chiffreB'] . "<br>";
+    echo "Addition : " . $calcul . "<br>";
+    echo "Soustraction : " . $calcul->soustraction(). "<br>";
+    echo "Multiplication : " . $calcul->multiplication(). "<br>";
+    echo "Division : " . $calcul->division(). "<br>";
+    echo "Modulo : " . $calcul->modulo(). "<br>";
 ?>
 
 

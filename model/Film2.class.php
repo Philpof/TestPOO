@@ -4,7 +4,7 @@ class Film2
 {
 // "propriétés", "attributs", "membres" ou "champs" : c'est pareil !
 
-  // Variables :
+  // Variables : elles sont mise en "private" et donc in va faire des getters pour les voir et des setters pour les modifier
   private $id;
   private $nom;
   private $realisateur;
@@ -13,7 +13,6 @@ class Film2
   // Fonctions ou méthodes :
 
     // les méthodes qui servent à récupérer des valeurs sont appelées des getters et on fera commencer leur nom par get
-
     public function getID2 () {
       return $this->id;
     }
@@ -31,7 +30,6 @@ class Film2
     }
 
     // les méthodes qui servent à définir / modifier / mettre à jour une valeur sont appelées des setters et on fera commencer leur nom par set
-
     public function setID2 ($newID) {
       $this->id = $newID;
     }

@@ -12,15 +12,15 @@ class Film1
 
   // Fonctions ou méthodes :
 
-  public function __construct($id, $nom, $realisateur, $annee) {
-    $this->id = $id;
-    $this->nom = $nom;
-    $this->realisateur = $realisateur;
-    $this->annee = $annee;
+  // le contructeur :
+  public function __construct($newId, $newNom, $newRealisateur, $newAnnee) {
+    $this->id = $newId;
+    $this->nom = $newNom;
+    $this->realisateur = $newRealisateur;
+    $this->annee = $newAnnee;
   }
 
     // les méthodes qui servent à récupérer des valeurs sont appelées des getters et on fera commencer leur nom par get
-
     public function getID1 () {
       return $this->id;
     }
