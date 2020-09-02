@@ -41,13 +41,17 @@ require('model/Film2.class.php');
 </form>
 <?php
     require('model/Calculatrice.class.php');
-    $calcul = Calculatrice::addition($_POST['chiffreA'], $_POST['chiffreB']);
+    $addition = Calculatrice::addition($_POST['chiffreA'], $_POST['chiffreB']);
+    $soustraction = Calculatrice::soustraction($_POST['chiffreA'], $_POST['chiffreB']);
+    $multiplicatio = Calculatrice::multiplication($_POST['chiffreA'], $_POST['chiffreB']);
+    $division = Calculatrice::division($_POST['chiffreA'], $_POST['chiffreB']);
+    $modulo = Calculatrice::modulo($_POST['chiffreA'], $_POST['chiffreB']);
     echo "Chiffre A = " . $_POST['chiffreA'] . " & Chiffre B = " . $_POST['chiffreB'] . "<br>";
-    echo "Addition : " . $calcul . "<br>";
-    echo "Soustraction : " . $calcul->soustraction(). "<br>";
-    echo "Multiplication : " . $calcul->multiplication(). "<br>";
-    echo "Division : " . $calcul->division(). "<br>";
-    echo "Modulo : " . $calcul->modulo(). "<br>";
+    echo "Addition : " . $addition . "<br>";
+    echo "Soustraction : " . $soustraction . "<br>";
+    echo "Multiplication : " . $multiplicatio . "<br>";
+    echo "Division : " . $division . "<br>";
+    echo "Modulo : " . $modulo . "<br>";
 ?>
 
 
