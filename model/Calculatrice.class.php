@@ -2,14 +2,6 @@
 
 class Calculatrice
 {
-  // private static $x;
-  // private static $y;
-  //
-  // // le contructeur :
-  // public function __construct($x, $y) {
-  //   self::$x = $x;
-  //   self::$y = $y;
-  // }
 
   public static function addition($x, $y) {
     return ($x + $y);
